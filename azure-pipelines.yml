@@ -30,7 +30,7 @@ jobs:
   - job: job_2
     dependsOn: job_1
     
-    condition: and(failed(), eq(variables.source_branches, true))
+    condition: and(succeeded(), eq(variables.source_branches, true))
 
     pool:
       Default
