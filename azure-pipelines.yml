@@ -35,4 +35,3 @@ jobs:
 
       - script: echo "hello world 2"
         displayName: continue on error 2 
-        condition: failed()
