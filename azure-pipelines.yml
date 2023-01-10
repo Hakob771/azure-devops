@@ -48,5 +48,8 @@ jobs:
       - script: echo $(mid_var)
         displayName: print mid_var
       
-      - publish: "/home/azureuser/esim"
-        artifact: my_feed
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: '/home/azureuser/esim'
+          ArtifactName: 'drop'
+          publishLocation: 'Container'
