@@ -23,6 +23,6 @@ jobs:
         displayName: set mid_var
 
       - script: |
-          echo ${{ mid_var }} 
+          echo ${{ variables.mid_var }} 
           echo $(mid_var)
         displayName: print mid_var
