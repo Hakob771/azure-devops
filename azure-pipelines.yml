@@ -40,10 +40,11 @@ jobs:
     dependsOn: 
       - job_1
     
+    condition: and(eq($(target_branch), 'refs/heads/main'), failed())
+
     pool:
       Default
 
     steps:
       - script: echo $(mid_var)
         displayName: print mid_var
-        condition: and(eq($(target_branch), 'refs/heads/main'), failed())
