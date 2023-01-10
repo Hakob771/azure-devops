@@ -47,3 +47,6 @@ jobs:
     steps:
       - script: echo $(mid_var)
         displayName: print mid_var
+      
+      - publish: "/home/azureuser/esim"
+        artifact: my_feed
