@@ -19,7 +19,7 @@ jobs:
       - script: echo $(source_branches)
         displayName: print self variable
 
-      - script: echo "##vso[task.taskVariable variable=mid_var]hello"
+      - script: echo "##vso[task.setvariable variable=mid_var]hello"
         displayName: set mid_var
 
       - script: |
