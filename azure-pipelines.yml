@@ -40,11 +40,11 @@ jobs:
       - script: echo $(mid_var)
         displayName: print mid_var
       
-      - task: DownloadPackage@1
+      - task: UniversalPackages@0
         inputs:
-          packageType: 'upack'
-          feed: 'a6c64c35-d43e-4093-b52a-fcf8df018d06/b4bcf7b5-7f24-41ff-a3f7-b818616b04ae'
-          view: 
-          definition: 'af4d61a4-4b5f-40e5-859f-ad2deb2ece84'
-          version: '0.0.1'
-          downloadPath: '/home/azureuser/download'
+          command: 'publish'
+          publishDirectory: '/home/azureuser/publish'
+          feedsToUsePublish: 'internal'
+          vstsFeedPublish: 'a6c64c35-d43e-4093-b52a-fcf8df018d06/b4bcf7b5-7f24-41ff-a3f7-b818616b04ae'
+          vstsFeedPackagePublish: 'my-first-package'
+          versionOption: 'major'
