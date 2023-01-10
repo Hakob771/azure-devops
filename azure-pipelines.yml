@@ -9,7 +9,7 @@ variables:
 jobs:
   - job: job_1
     pool:
-      Default
+      vmImage: ubuntu-latest
     
     steps:
       - script: echo $(System.PullRequest.TargetBranch)
