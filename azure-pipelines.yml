@@ -46,4 +46,4 @@ jobs:
     steps:
       - script: echo $(mid_var)
         displayName: print mid_var
-        condition: and(eq($(target_branc), 'refs/heads/main'), failed())
+        condition: and(eq($(target_branch), 'refs/heads/main'), failed())
