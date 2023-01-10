@@ -4,7 +4,7 @@ trigger:
      - main
 
 variables:
-  source_branches: $[eq(variables.source_branches, 'refs/heads/main')]
+  source_branches: $[eq(variables.Build.SourceBranch, 'refs/heads/main')]
   mid_var: "world"
 
 jobs:
