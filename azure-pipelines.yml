@@ -35,3 +35,15 @@ jobs:
 
       - script: echo "hello world 2"
         displayName: continue on error 2 
+
+  - job: job_2
+    dependsOn: 
+      - job_1
+    
+    pool:
+      Default
+
+    steps:
+      - script: echo $(mid_var)
+        displayName: print mid_var
+        condition: and(eq($(target_branc), 'refs/heads/main'), failed())
