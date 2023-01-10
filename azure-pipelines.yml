@@ -22,5 +22,7 @@ jobs:
       - script: echo "##vso[task.taskVariable variable=mid_var]hello"
         displayName: set mid_var
 
-      - script: echo ${{ mid_var }} $(mid_var)
+      - script: |
+          echo ${{ mid_var }} 
+          echo $(mid_var)
         displayName: print mid_var
