@@ -1,10 +1,7 @@
-pr:
+trigger:
   branches:
-    include:
-      - main
-
-variables:
-  target_branch: eq(variables['System.PullRequest.TargetBranch'], /refs/heads/main)
+   include:
+     - main
 
 jobs:
   - job: job_1
@@ -12,8 +9,5 @@ jobs:
       vmImage: ubuntu-latest
     
     steps:
-      - script: echo $(System.PullRequest.TargetBranch)
-        displayName: just print target branch
-      
-      - script: echo $(target_branch)
-        displayName: print value of variable
+      - script: echo "hello"
+        displayName: just print
