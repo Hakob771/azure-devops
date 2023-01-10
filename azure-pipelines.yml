@@ -3,6 +3,9 @@ trigger:
    include:
      - main
 
+variables:
+  source_branches: $(Build.SourceBranch)
+
 jobs:
   - job: job_1
     pool:
@@ -11,3 +14,6 @@ jobs:
     steps:
       - script: echo $(Build.SourceBranch)
         displayName: just print
+        
+      - script: echo $(source_branches)
+        displayName: print self variable
