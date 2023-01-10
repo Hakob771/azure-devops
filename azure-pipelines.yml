@@ -32,4 +32,7 @@ jobs:
         
       - script: echo "hello world"
         displayName: continue on error
+
+      - script: echo "hello world 2"
+        displayName: continue on error 2 
         condition: failed()
