@@ -9,5 +9,5 @@ jobs:
       Default
     
     steps:
-      - script: echo "hello"
+      - script: echo $(Build.SourceBranch)
         displayName: just print
